@@ -19,7 +19,7 @@
 
 <script>
 
-import Hero from './components/hero.vue';
+import Hero from './components/Hero.vue';
 import Sidebar from './components/Sidebar/Sidebar.vue';
 
 import 'primeicons/primeicons.css'

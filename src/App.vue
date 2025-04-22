@@ -1,7 +1,7 @@
 <template>
 
   <div id="main" class="box-border max-w-full h-screen text-white flex items-center">
-    <div class=" max-w-full w-[90vw] h-[90vh] overflow-hidden mx-auto flex bg-gray-900/80 shadow-2xl rounded shadow-black ">
+    <div class=" max-w-full w-[90vw] h-[90vh] overflow-hidden mx-auto flex  lg:bg-gray-900/80 shadow-2xl rounded shadow-black">
       <!-- SideBar -->
       <Sidebar @tab-changed="handelCurrentlyActiveTab" />
 

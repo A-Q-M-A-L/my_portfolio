@@ -1,8 +1,7 @@
 <template>
     <!-- Hero -->
-    <div class="grow w-full h-full mx-6  flex items-center justify-center lg:overflow-hidden overflow-x-hidden overflow-y-scroll "
-      >
-        <div class="w-[85%] h-[85%]">
+    <div class="grow w-full h-full lg:mx-6 flex items-center justify-center ">
+        <div class="lg:w-[85%] w-full h-[85%]  px-6">
 
             <!-- Custom Hamburger -->
             <div @click="toggleMenu" class="w-full flex justify-end">
@@ -14,9 +13,9 @@
             </div>
 
 
-
+            <!-- mobile menu -->
             <div id="menu"
-                class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen items-center justify-center  space-y-3 text-lg text-white uppercase bg-gradient-to-l from-green-800/90 to-black/90 z-30 lg:hidden">
+                class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen items-center justify-center  space-y-3 text-lg text-white uppercase bg-gradient-to-tl from-transparent via-[#084b02bb] to-[#084b02] z-30 lg:hidden">
 
                 <div class="flex flex-col items-center space-y-11">
 
@@ -68,8 +67,9 @@
                 </div>
             </div>
 
+
             <div class="relative w-full h-full " style="perspective: 4000px;">
-                <div class="absolute w-full h-full transform-style preserve-3d duration-700"
+                <div class="absolute w-full h-full transform-style preserve-3d duration-300"
                     :style="{ transform: `${`rotateY(${rotateY}deg)`} ${rotateX ? `rotateX(${rotateX}deg)` : ''}` }">
                     <!-- Home -->
                     <Home />
@@ -131,12 +131,12 @@ export default {
 
         rotateTo(no) {
 
-            
+
             const face = no || this.tabNo;
 
             if (no) {
                 this.toggleMenu();
-               
+
             }
 
             switch (face) {
@@ -174,7 +174,7 @@ export default {
             console.log("menu toggle");
 
         },
-        
+
     },
     watch: {
         tabNo: {
@@ -182,7 +182,7 @@ export default {
             handler(newVal, oldVal) {
                 console.log('tabNo changed:', oldVal, '->', newVal);
                 this.rotateTo();
-              
+
             }
 
         }

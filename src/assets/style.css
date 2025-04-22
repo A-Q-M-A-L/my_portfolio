@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-poppins: "Poppins", sans-serif; 
+}
+
+*{
+    font-family: Poppins;
+}
+
+.about-flex{
+  @apply flex flex-col lg:flex-row w-full space-y-10 lg:space-y-0 lg:space-x-3 
+}
+
+.about-desc{
+  @apply flex w-full space-x-3
+}
+
+.about-exp{
+  @apply flex items-center space-x-2 shadow-[0_4px_3px_-5px_rgba(255,255,255,0.5)] w-full p-1 
+  text-[0.49em] lg:text-xs
+
+}
+
+
+.gallery-app{
+  @apply relative  rounded-sm overflow-hidden cursor-pointer hover:shadow-2xl hover:shadow-green-500/15 aspect-square flex flex-col items-center justify-center font-semibold text-center space-y-3 lg:shadow-none shadow shadow-white 
+ }
+
+
+/* .gallery-app-gradient{
+  @apply group-hover:opacity-0 duration-300 z-50 h-full flex items-center justify-center absolute bg-black/20  inset-0 
+} */
+
+.gallery-app-second-gradient{
+  @apply  z-50 h-full flex items-center justify-center absolute bg-gradient-to-t from-[#111827] to-transparent  hover:from-[#f9fafb]  inset-0 
+}
+
+.gallery-app-text{
+  @apply duration-150 text-white group-hover:text-black group-hover:text-2xl text-sm lg:text-xl font-light
+}
+
+.gallery-app-image{
+  @apply group-hover:scale-110 duration-300 h-full
+}
+
+/* Hamburger */
+
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+  
+  .open {
+    transform: rotate(90deg);
+  }
+  
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
+
+
+
+
+
+
+
+
+
+ /* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px; 
+}
+
+::-webkit-scrollbar-track {
+  background: green;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #22c11e; 
+  border-radius: 4px;
+  border: 2px solid green;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #16a34a; 
+}  
+

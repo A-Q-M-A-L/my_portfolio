@@ -77,7 +77,7 @@
                 </div>
 
                 <button type="submit" :disabled="loader"
-                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed mt-4 lg:mt-0">
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed lg:mt-4 mt-0">
                     Send Message
                 </button>
             </form>

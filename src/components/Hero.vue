@@ -15,7 +15,7 @@
 
             <!-- mobile menu -->
             <div id="menu"
-                class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen items-center justify-center  space-y-3 text-lg text-white uppercase bg-gradient-to-tl from-transparent via-[#084b02bb] to-[#084b02] z-30 lg:hidden">
+                class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen items-center justify-center  space-y-3 text-lg text-white uppercase bg-gradient-to-bl from-transparent via-[#084b028c] to-transparent z-30 lg:hidden">
 
                 <div class="flex flex-col items-center space-y-11">
 
@@ -72,10 +72,10 @@
                 <div class="absolute w-full h-full transform-style preserve-3d duration-300"
                     :style="{ transform: `${`rotateY(${rotateY}deg)`} ${rotateX ? `rotateX(${rotateX}deg)` : ''}` }">
                     <!-- Home -->
-                    <Home />
+                    <Home @changeTab="rotateTo($event)" />
 
                     <!-- About me -->
-                    <AboutMe />
+                    <AboutMe @changeTab="rotateTo($event)" />
 
                     <!-- Services -->
                     <Services />
@@ -85,6 +85,8 @@
 
                     <!-- Contact Me -->
                     <Contact />
+
+                    
 
                 </div>
 
@@ -105,6 +107,8 @@ import Contact from './Tabs/Contact.vue';
 
 
 
+
+
 export default {
     props: {
         tabNo: {
@@ -118,7 +122,8 @@ export default {
         AboutMe,
         Services,
         Gallery,
-        Contact
+        Contact,
+      
     },
     data() {
         return {
@@ -135,10 +140,8 @@ export default {
             const face = no || this.tabNo;
 
             if (no) {
-                this.toggleMenu();
-
+            this.toggleMenu();
             }
-
             switch (face) {
                 case '1':
                     this.rotateY = 0;
